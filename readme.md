@@ -2,6 +2,8 @@
 
 under development
 
+<p>Buy me a cup of coffee :coffee: :grinning: <a href="https://paypal.me/jakobzhao"><img src="img/Donate-PayPal-green.svg" /></a> </p>
+
 ### Team Members
 
 - [Bo Zhao](https://github.com/jakobzhao)
