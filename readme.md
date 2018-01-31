@@ -1,6 +1,4 @@
-# NeoCarto
-
-under development
+# NeoCarto (under development)
 
 <p>Buy us a cup of coffee :coffee: :grinning: <a href="https://paypal.me/jakobzhao"><img src="https://github.com/jakobzhao/storymap/raw/master/img/Donate-PayPal-green.svg?sanitize=true" align="center" /></a> </p>
 
