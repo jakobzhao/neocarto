@@ -1,0 +1,3 @@
+An implementation of [Danny Holten](http://www.win.tue.nl/~dholten/)'s *hierarchical edge bundling* algorithm in [D3](https://d3js.org/), showing dependencies between classes in a software class hierarchy. Dependencies are bundled according to the parent packages. This example uses two layouts: a radial d3.layout.cluster to position the tree nodes, and d3.layout.bundle to group the dependencies into spline bundles. Thanks to [Jason Davies](http://www.jasondavies.com/)for contributing the layout implementation!
+
+[Mike Bostock](https://bl.ocks.org/mbostock)’s Block [1044242](https://gist.github.com/mbostock/1044242) released under the GNU General Public License, version 3.
