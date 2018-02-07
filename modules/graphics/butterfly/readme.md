@@ -1,0 +1,2 @@
+
+A Butterfly Chart (also called Tornado Chart) is a type of bar chart where two sets of data series are displayed side by side. It gives a quick glance of the difference between two groups with same parameters. It is also possible to stack/place two bars on each side (for example, ‘developed countries’ and ‘developing countries’) to give a further division of categories

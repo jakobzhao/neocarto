@@ -1,0 +1,1 @@
+A Venn diagram or set diagram is a diagram that shows all possible logical relations between a finite collection of sets. Venn diagrams were conceived around 1880 by John Venn. 
