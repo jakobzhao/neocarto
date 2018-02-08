@@ -1,0 +1,133 @@
+/*! -----------------------------------------------------------------
+[Colors]
+*/
+
+::-moz-selection {
+    background: #95a5a6;
+    color: #fff !important;
+}
+
+::-webkit-selection {
+    background: #95a5a6;
+    color: #fff !important;
+}
+
+::selection {
+    background: #95a5a6;
+    color: #fff !important;
+}
+
+a,
+.icon-box-icon,
+.post-meta a:hover,
+.post-meta a:focus,
+.search-button:hover,
+.widget ul li a:hover,
+.widget ol li a:hover,
+.filters > li > a:hover,
+.filters > li > a.current,
+.comment-meta-date a:hover,
+.comment-meta-date a:focus,
+.comment-meta-author a:hover,
+.comment-meta-author a:focus,
+.widget_recent_entries a:hover {
+    color: #95a5a6;
+}
+
+a:hover,
+a:focus {
+    color: #798d8f;
+}
+
+blockquote {
+    border-left: 2px solid #95a5a6;
+}
+
+.form-control:focus,
+.panel .panel-heading:hover,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+    border-color: #95a5a6;
+}
+
+.label-brand,
+.progress-bar,
+.post-tags a:hover,
+.post-tags a:focus,
+.tagcloud > a:hover,
+.comment-reply > a:hover,
+.comment-reply > a:focus,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+    background-color: #95a5a6;
+}
+
+.loader:after {
+    border-color: #95a5a6 transparent transparent transparent;
+}
+
+.btn.btn-brand {
+    background-color: #95a5a6;
+    border-color: #95a5a6;
+    color: #fff;
+}
+
+.btn.btn-brand:hover,
+.btn.btn-brand:focus {
+    background-color: #87999a;
+    border-color: #87999a;
+    color: #fff;
+}
+
+.btn.btn-brand.btn-outline {
+    background: transparent;
+    border-color: #95a5a6;
+    color: #95a5a6;
+}
+
+.btn.btn-brand.btn-outline:hover,
+.btn.btn-brand.btn-outline:focus {
+    background: #95a5a6;
+    color: #fff;
+}
+
+.btn.btn-brand.btn-link {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: #95a5a6;
+}
+
+.btn.btn-brand.btn-link:hover,
+.btn.btn-brand.btn-link:focus {
+    background-color: transparent;
+    text-decoration: none;
+    color: #87999a;
+}
+
+.btn.btn-brand.btn-fade {
+    background: transparent;
+    border-color: rgba(149, 165, 166, .5);
+    color: rgba(149, 165, 166, .5);
+}
+
+.btn.btn-brand.btn-fade:hover,
+.btn.btn-brand.btn-fade:focus {
+    background: transparent;
+    border-color: #95a5a6;
+    color: #95a5a6;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    border-top: 3px solid #95a5a6;
+}
