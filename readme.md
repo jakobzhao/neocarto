@@ -1,5 +1,7 @@
 # NeoCarto (under development)
 
+<img src="https://github.com/jakobzhao/neocarto/raw/master/assets/logo.png" width="25%" height="25%" align="right" />
+
 <p>Buy us a cup of coffee :coffee: :grinning: <a href="https://paypal.me/jakobzhao"><img src="https://github.com/jakobzhao/storymap/raw/master/img/Donate-PayPal-green.svg?sanitize=true" align="center" /></a> </p>
 
 ### Team Members
