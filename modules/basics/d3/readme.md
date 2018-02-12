@@ -1,4 +1,4 @@
-D3.js Fundamentals
+# D3.js Fundamentals
 
 D3 stands for Data-Driven Documents. It is an open-source JavaScript library developed by Mike Bostock to create custom interactive data visualizations in the web browser using SVG, HTML and CSS.
 
