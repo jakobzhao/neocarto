@@ -10,6 +10,54 @@
 
 - [Svevo Giovanni](https://github.com/cedrox74)
 
+### Setups
+ - Github
+ - CDN
+ - Debugging
+ 
+### Basics
+ - jQuery
+ - [D3.js](modules/basics/d3)
+ - geojson
+ - 
+### Infographics
+ - treemap
+ - circulate
+ - streamgraph
+ 
+### Geovisual Analytics
+
+### Map Fundamentals
+
+ - Data
+ - Color
+ - Neat Line
+ - Typography
+ - Labelling
+ - Legend
+ - Icon
+ - Graticules
+ - Projection
+ - Tiles
+
+#### Euclidean Space
+
+ - Hexagon
+ - Heat Map
+ - Spatial Sankey (flow map)
+ - Voronoi
+ - 
+ 
+#### Non-Euclidean Space
+
+ - Force Graph
+ - Cartogram
+ - 
+ 
+ ### Narratives
+- Small Multiples
+- Storymap.js
+- Dashboard from Bootstrap
 
 ### Libraries
 
@@ -21,10 +69,7 @@
 - Font Awesome
 - Awesome CSS
 
-### Narratives
 
-- Storymap.js
-- Dashboard from Bootstrap
 
 ### Basemaps
 
