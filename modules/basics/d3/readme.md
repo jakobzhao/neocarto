@@ -226,3 +226,8 @@ D3 includes the following DOM manipulation methods that you can use after select
 | classed("css class", bool) | Gets, adds or removes a css class from the selection |
 
 ## Method Chaining in D3
+
+
+## References:
+
+[1] http://www.tutorialsteacher.com/d3js
