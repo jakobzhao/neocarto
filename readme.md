@@ -52,7 +52,7 @@
 
  - Force Graph
  - Cartogram
- - 
+
  
  ### Narratives
 - Small Multiples
@@ -78,6 +78,21 @@
 - CartoDB
 - OpenStreetMaps
 
+### Memo
+
+http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html
+
+time circle
+
+Hierarchy
+
+Cartogram
+
+voronoi
+
+wind map
+
+https://github.com/emeeks
 
 ### How to Contribute?
 
