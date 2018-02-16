@@ -1,1 +1,0 @@
-This example shows how to use the [d3-hexbin](https://github.com/d3/d3-hexbin) plugin for hexagonal binning. 2,000 random points with a normal distribution are binned into hexagons; color encodes the number of points that fall into each bin. You can also use [area encoding](https://bl.ocks.org/mbostock/4248146). Inspired by earlier work by Zachary Johnson.
