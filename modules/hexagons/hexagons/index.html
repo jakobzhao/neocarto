@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon"  href="../../../web/pages/assets/favicon.png">
+    <title>Hexagons</title>
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="../../../web/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../../../web/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../../web/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../../../web/vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../../web/vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" src="../../../web/pages/assets/logo.png" href="index.html" ><a class="navbar-brand" href="../../../index.html">Neocarto</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="navbar-item">
+                    <a class="btn btn-block btn-social btn-github" href="https://github.com/jakobzhao/neocarto" target="_blank">
+                        <i class="fa fa-github" alt="Github" ></i> 
+                    </a>
+                    
+                </li>
+                
+            </ul>
+            <!-- /.navbar-top-links -->
+
+                <!-- Page Header end-->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <!--<li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                             
+                        </li>-->
+                        <li>
+                            <a href="../../../index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-cog fa-fw"></i> Basics<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Color</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>D3</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Layout</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Select</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Template</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Visualization</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Elements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i> Annotation</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Labeling</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Graphics<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+
+                                    <li>
+                                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Bar Graphics <span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+    
+                                    <li>
+                                        <a href="#"><i class="fa fa-angle-right fa-fw"></i>Bar</a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="#"><i class="fa fa-angle-right fa-fw"></i></i>Candlestick</a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="#"><i class="fa fa-angle-right fa-fw"></i></i>Histogram</a>
+                                    </li>
+                                        </ul>
+                                        <!-- /.nav-third-level -->
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-pie-chart fa-fw"></i> Circular Graphics <span class="fa arrow"></span></a>
+                                            <ul class="nav nav-third-level">
+                                                <li>
+                                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Arc Diagram</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Circular</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Pie</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Polar Area</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Polar Hover</a>
+                                                </li> 
+                                            </ul>
+                                            <!-- /.nav-third-level -->
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-area-chart fa-fw"></i> Area Graphics<span class="fa arrow"></span></a>
+                                            <ul class="nav nav-third-level">
+                                                <li>
+                                                   <a href="#"><i class="fa fa-angle-right fa-fw"></i></i>Butterfly</a>
+                                                </li>
+                                                <li>
+                                                   <a href="#"><i class="fa fa-angle-right fa-fw"></i>Small Multiple</a>
+                                                </li>
+                                                <li>
+                                                   <a href="#"><i class="fa fa-angle-right fa-fw"></i>Stacked Area</a>
+                                                </li>
+                                                <li>
+                                                   <a href="#"><i class="fa fa-angle-right fa-fw"></i>Stream Graph</a>
+                                                </li>
+                                                <li>
+                                                   <a href="#"><i class="fa fa-angle-right fa-fw"></i>Venn</a>
+                                                </li> 
+                                            </ul>
+                                                <!-- /.nav-third-level -->
+                                            </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                        <li>
+                            <a href="#"><i class="fa fa-connectdevelop fa-fw"></i> Hexagons<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                  <a href="../../modules/hexagons/hexagons/index.html"><i class="fa fa-angle-right fa-fw"></i>Hexagons </a>
+                                <li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-share-alt fa-fw"></i> Networks<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#"><i class="fa fa-angle-right fa-fw"></i>Networks </a>
+                        <li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                                <a href="#"><i class="fa fa-map-o fa-fw"></i> Maps<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#"><i class="fa fa-angle-right fa-fw"></i>Projections </a>
+                                    <li>
+                                        <a href="#"><i class="fa fa-angle-right fa-fw"></i>Sankeys</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-angle-right fa-fw"></i>Tiles</a>
+                                    </li>
+                        </li>
+                               </ul>
+                                <!-- /.nav-second-level -->
+                        </li>
+
+                        <li>
+                                <a href="#"><i class="fa fa-align-left fa-fw"></i> Text<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right fa-fw"></i>Word Cloud </a>
+                            <li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right fa-fw"></i>Storytelling </a>
+                            <li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right fa-fw"></i>Dendrogram </a>
+                            <li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right fa-fw"></i>Tree </a>
+                            <li>                                  
+                                </ul>
+                                    <!-- /.nav-second-level -->
+                                </li>
+                            <li>
+                                <a href="#"><i class="fa fa-clock-o fa-fw"></i> Time<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                <li>
+                                   <a href="#"><i class="fa fa-angle-right fa-fw"></i>Timeline </a>
+                                <li>
+                                   <a href="#"><i class="fa fa-angle-right fa-fw"></i>Timeslider</a>
+                                </li>
+        
+                                </li>
+                                       </ul>
+                                        <!-- /.nav-second-level -->
+                                </li>
+                        <li>
+                        <li>
+                                    <a href="#"><i class="fa fa-map-marker fa-fw"></i> Vectors<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Labels </a>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right fa-fw"></i>Points</a>
+                                </li>
+                                <li>
+                                     <a href="#"><i class="fa fa-angle-right fa-fw"></i>Polygons </a>
+                                <li>
+                                     <a href="#"><i class="fa fa-angle-right fa-fw"></i>Polylines</a>
+                                </li>
+                                <li>
+                                     <a href="#"><i class="fa fa-angle-right fa-fw"></i>Topology</a>
+                                </li>
+                                </li>
+                                </ul>
+                                </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Hexagons</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-connectdevelop fa-fw"></i> Example
+                            <div class="pull-right">
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <img src="assets/image.jpg" width="100%">
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-code fa-fw"></i> Code
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        Actions
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Copy to clipboard</a>
+                                        </li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <pre><code>
+                                        &lt;!DOCTYPE html&gt;
+                                        &lt;style&gt;
+                                        
+                                        .hexagon {
+                                          stroke: #000;
+                                          stroke-width: 0.5px;
+                                        }
+                                        
+                                        &lt;/style&gt;
+                                        &lt;svg width=&quot;960&quot; height=&quot;500&quot;&gt;&lt;/svg&gt;
+                                        &lt;script src=&quot;https://d3js.org/d3.v4.min.js&quot;&gt;&lt;/script&gt;
+                                        &lt;script src=&quot;https://d3js.org/d3-hexbin.v0.2.min.js&quot;&gt;&lt;/script&gt;
+                                        &lt;script&gt;
+                                        
+                                        var svg = d3.select(&quot;svg&quot;),
+                                            margin = {top: 20, right: 20, bottom: 30, left: 40},
+                                            width = +svg.attr(&quot;width&quot;) - margin.left - margin.right,
+                                            height = +svg.attr(&quot;height&quot;) - margin.top - margin.bottom,
+                                            g = svg.append(&quot;g&quot;).attr(&quot;transform&quot;, &quot;translate(&quot; + margin.left + &quot;,&quot; + margin.top + &quot;)&quot;);
+                                        
+                                        var randomX = d3.randomNormal(width / 2, 80),
+                                            randomY = d3.randomNormal(height / 2, 80),
+                                            points = d3.range(2000).map(function() { return [randomX(), randomY()]; });
+                                        
+                                        var color = d3.scaleSequential(d3.interpolateLab(&quot;white&quot;, &quot;steelblue&quot;))
+                                            .domain([0, 20]);
+                                        
+                                        var hexbin = d3.hexbin()
+                                            .radius(20)
+                                            .extent([[0, 0], [width, height]]);
+                                        
+                                        var x = d3.scaleLinear()
+                                            .domain([0, width])
+                                            .range([0, width]);
+                                        
+                                        var y = d3.scaleLinear()
+                                            .domain([0, height])
+                                            .range([height, 0]);
+                                        
+                                        g.append(&quot;clipPath&quot;)
+                                            .attr(&quot;id&quot;, &quot;clip&quot;)
+                                          .append(&quot;rect&quot;)
+                                            .attr(&quot;width&quot;, width)
+                                            .attr(&quot;height&quot;, height);
+                                        
+                                        g.append(&quot;g&quot;)
+                                            .attr(&quot;class&quot;, &quot;hexagon&quot;)
+                                            .attr(&quot;clip-path&quot;, &quot;url(#clip)&quot;)
+                                          .selectAll(&quot;path&quot;)
+                                          .data(hexbin(points))
+                                          .enter().append(&quot;path&quot;)
+                                            .attr(&quot;d&quot;, hexbin.hexagon())
+                                            .attr(&quot;transform&quot;, function(d) { return &quot;translate(&quot; + d.x + &quot;,&quot; + d.y + &quot;)&quot;; })
+                                            .attr(&quot;fill&quot;, function(d) { return color(d.length); });
+                                        
+                                        g.append(&quot;g&quot;)
+                                            .attr(&quot;class&quot;, &quot;axis axis--y&quot;)
+                                            .call(d3.axisLeft(y).tickSizeOuter(-width));
+                                        
+                                        g.append(&quot;g&quot;)
+                                            .attr(&quot;class&quot;, &quot;axis axis--x&quot;)
+                                            .attr(&quot;transform&quot;, &quot;translate(0,&quot; + height + &quot;)&quot;)
+                                            .call(d3.axisBottom(x).tickSizeOuter(-height));
+                                        
+                                        &lt;/script&gt;</code></pre>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-8">
+                                    <div id="morris-bar-chart"></div>
+                                </div>
+                                <!-- /.col-lg-8 (nested) -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-align-left fa-fw"></i> Description
+                            </div>
+                            <div class="panel-body">
+                               <p> Hexagonal Binning is a way to manage the problem of having to many points that start to overlap. Hexagonal binning plots density, rather than points. Points are binned into gridded hexagons and distribution (the number of points per hexagon) is displayed using either the color or the area of the hexagons.This technique was first described in 1987 (D.B.Carr et al. Scatterplot Matrix Techniques for large N, Journal of the American Statistical Association, No.389 pp 424-436).</p>
+    
+                                    <p>There are many reasons for using hexagons instead of squares for binning a 2D surface as a plane. The most evident is that hexagons are more similar to circle than square. This translates in more efficient data aggregation around the bin center. This can be seen by looking at some particular properties of hexagons and, especially, of the hexagonal tessellation. </p>
+                                <a href="http://datavizproject.com/data-type/hexagonal-binning/" target="_blank" class="btn btn-default btn-block">More info</a>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                        
+                            <!-- /.panel-heading -->
+                            
+                            <!-- /.panel-body -->
+                            
+                            <!-- /.panel-footer -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-copyright fa-fw"></i> License
+                        </div>
+                        <div class="panel-body">
+                           <p> This example shows how to use the <a href="https://github.com/d3/d3-hexbin" target="_blank">d3-hexbin </a>plugin for hexagonal binning. 2,000 random points with a normal distribution are binned into hexagons; color encodes the number of points that fall into each bin. You can also use <a href="https://bl.ocks.org/mbostock/4248146" target="_blank">area encoding</a>. Inspired by earlier work by Zachary Johnson.</p>
+
+                                <p>Description from <a href="http://datavizproject.com" target="_blank">Dataviz project</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    
+                        <!-- /.panel-heading -->
+                        
+                        <!-- /.panel-body -->
+                        
+                        <!-- /.panel-footer -->
+                    </div>
+                    <!-- /.panel .chat-panel -->
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../../../web/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../../web/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../../../web/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../../../web/vendor/raphael/raphael.min.js"></script>
+    <script src="../../../web/vendor/morrisjs/morris.min.js"></script>
+    <script src="../../../web/data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../../../web/dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
