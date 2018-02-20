@@ -320,72 +320,72 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <pre><code>
-                                        &lt;!DOCTYPE html&gt;
-                                        &lt;style&gt;
+                                    <pre>&lt;!DOCTYPE html&gt;
+&lt;style&gt;
                                         
-                                        .hexagon {
-                                          stroke: #000;
-                                          stroke-width: 0.5px;
-                                        }
+.hexagon {
+stroke: #000;
+stroke-width: 0.5px;
+}
                                         
-                                        &lt;/style&gt;
-                                        &lt;svg width=&quot;960&quot; height=&quot;500&quot;&gt;&lt;/svg&gt;
-                                        &lt;script src=&quot;https://d3js.org/d3.v4.min.js&quot;&gt;&lt;/script&gt;
-                                        &lt;script src=&quot;https://d3js.org/d3-hexbin.v0.2.min.js&quot;&gt;&lt;/script&gt;
-                                        &lt;script&gt;
+&lt;/style&gt;
+&lt;svg width=&quot;960&quot; height=&quot;500&quot;&gt;&lt;/svg&gt;
+&lt;script src=&quot;https://d3js.org/d3.v4.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://d3js.org/d3-hexbin.v0.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
                                         
-                                        var svg = d3.select(&quot;svg&quot;),
-                                            margin = {top: 20, right: 20, bottom: 30, left: 40},
-                                            width = +svg.attr(&quot;width&quot;) - margin.left - margin.right,
-                                            height = +svg.attr(&quot;height&quot;) - margin.top - margin.bottom,
-                                            g = svg.append(&quot;g&quot;).attr(&quot;transform&quot;, &quot;translate(&quot; + margin.left + &quot;,&quot; + margin.top + &quot;)&quot;);
+var svg = d3.select(&quot;svg&quot;),
+margin = {top: 20, right: 20, bottom: 30, left: 40},
+width = +svg.attr(&quot;width&quot;) - margin.left - margin.right,
+height = +svg.attr(&quot;height&quot;) - margin.top - margin.bottom,
+g = svg.append(&quot;g&quot;).attr(&quot;transform&quot;, &quot;translate(&quot; + margin.left + &quot;,&quot; + margin.top + &quot;)&quot;);
                                         
-                                        var randomX = d3.randomNormal(width / 2, 80),
-                                            randomY = d3.randomNormal(height / 2, 80),
-                                            points = d3.range(2000).map(function() { return [randomX(), randomY()]; });
+var randomX = d3.randomNormal(width / 2, 80),
+randomY = d3.randomNormal(height / 2, 80),
+points = d3.range(2000).map(function() { return [randomX(), randomY()]; });
                                         
-                                        var color = d3.scaleSequential(d3.interpolateLab(&quot;white&quot;, &quot;steelblue&quot;))
-                                            .domain([0, 20]);
+var color = d3.scaleSequential(d3.interpolateLab(&quot;white&quot;, &quot;steelblue&quot;))
+.domain([0, 20]);
                                         
-                                        var hexbin = d3.hexbin()
-                                            .radius(20)
-                                            .extent([[0, 0], [width, height]]);
+var hexbin = d3.hexbin()
+.radius(20)
+.extent([[0, 0], [width, height]]);
                                         
-                                        var x = d3.scaleLinear()
-                                            .domain([0, width])
-                                            .range([0, width]);
+var x = d3.scaleLinear()
+.domain([0, width])
+.range([0, width]);
                                         
-                                        var y = d3.scaleLinear()
-                                            .domain([0, height])
-                                            .range([height, 0]);
+var y = d3.scaleLinear()
+.domain([0, height])
+.range([height, 0]);
                                         
-                                        g.append(&quot;clipPath&quot;)
-                                            .attr(&quot;id&quot;, &quot;clip&quot;)
-                                          .append(&quot;rect&quot;)
-                                            .attr(&quot;width&quot;, width)
-                                            .attr(&quot;height&quot;, height);
+g.append(&quot;clipPath&quot;)
+.attr(&quot;id&quot;, &quot;clip&quot;)
+.append(&quot;rect&quot;)
+.attr(&quot;width&quot;, width)
+.attr(&quot;height&quot;, height);
                                         
-                                        g.append(&quot;g&quot;)
-                                            .attr(&quot;class&quot;, &quot;hexagon&quot;)
-                                            .attr(&quot;clip-path&quot;, &quot;url(#clip)&quot;)
-                                          .selectAll(&quot;path&quot;)
-                                          .data(hexbin(points))
-                                          .enter().append(&quot;path&quot;)
-                                            .attr(&quot;d&quot;, hexbin.hexagon())
-                                            .attr(&quot;transform&quot;, function(d) { return &quot;translate(&quot; + d.x + &quot;,&quot; + d.y + &quot;)&quot;; })
-                                            .attr(&quot;fill&quot;, function(d) { return color(d.length); });
+g.append(&quot;g&quot;)
+.attr(&quot;class&quot;, &quot;hexagon&quot;)
+.attr(&quot;clip-path&quot;, &quot;url(#clip)&quot;)
+.selectAll(&quot;path&quot;)
+.data(hexbin(points))
+.enter().append(&quot;path&quot;)
+.attr(&quot;d&quot;, hexbin.hexagon())
+.attr(&quot;transform&quot;, function(d) { return &quot;translate(&quot; + d.x + &quot;,&quot; + d.y + &quot;)&quot;; })
+.attr(&quot;fill&quot;, function(d) { return color(d.length); });
                                         
-                                        g.append(&quot;g&quot;)
-                                            .attr(&quot;class&quot;, &quot;axis axis--y&quot;)
-                                            .call(d3.axisLeft(y).tickSizeOuter(-width));
+g.append(&quot;g&quot;)
+.attr(&quot;class&quot;, &quot;axis axis--y&quot;)
+.call(d3.axisLeft(y).tickSizeOuter(-width));
                                         
-                                        g.append(&quot;g&quot;)
-                                            .attr(&quot;class&quot;, &quot;axis axis--x&quot;)
-                                            .attr(&quot;transform&quot;, &quot;translate(0,&quot; + height + &quot;)&quot;)
-                                            .call(d3.axisBottom(x).tickSizeOuter(-height));
+g.append(&quot;g&quot;)
+.attr(&quot;class&quot;, &quot;axis axis--x&quot;)
+.attr(&quot;transform&quot;, &quot;translate(0,&quot; + height + &quot;)&quot;)
+.call(d3.axisBottom(x).tickSizeOuter(-height));
                                         
-                                        &lt;/script&gt;</code></pre>
+&lt;/script&gt;
+</pre>
                                     <!-- /.table-responsive -->
                                 </div>
                                 <!-- /.col-lg-4 (nested) -->
