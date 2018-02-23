@@ -4,6 +4,42 @@
 
 <p>Buy us a cup of coffee :coffee: :grinning: <a href="https://paypal.me/jakobzhao"><img src="https://github.com/jakobzhao/storymap/raw/master/img/Donate-PayPal-green.svg?sanitize=true" align="center" /></a> </p>
 
+### Convention
+
+Naming
+
+structures
+
+Images
+
+cdn,
+
+the outline of the readme.md in each module.
+
+### website
+
+- the same web site template
+- tag: data type, graphic type
+-
+
+
+### Content
+
+basic operations
+layout : single page, storytelling
+
+### Data
+
+ - election data
+       raw data.
+ - images --screenshots
+
+ - Vector Data
+    US
+    Oregon
+    World
+
+
 ### Team Members
 
 - [Bo Zhao](https://github.com/jakobzhao)
