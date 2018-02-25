@@ -8,7 +8,20 @@ body {
   padding-top: 50px;
 }
 .panel-body {
-  padding: 0px;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+.panel-default>.panel-heading {
+  color: rgb(150, 48, 4);
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+a {
+    color: rgb(150, 48, 4);
+    text-decoration: none;
 }
 .navbar-brand {
   float: left;
