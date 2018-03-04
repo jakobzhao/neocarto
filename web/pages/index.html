@@ -25,7 +25,21 @@
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <script>window.location.host.indexOf("github.io")>-1&&"https:"!=window.location.protocol&&(window.location.protocol="https:");</script>
 
+    <!-- Prefetch DNS for external assets -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+  
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/shuffle-styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    
+    
+    <script>window.site_url = "/Shuffle";</script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -54,7 +68,7 @@
 
         <ul class="nav navbar-top-links navbar-right">
             <li class="navbar-item">
-                <a class="btn btn-block btn-social btn-github" href="https://github.com/jakobzhao/neocarto"
+                <a href="https://github.com/jakobzhao/neocarto"
                    target="_blank">
                     <i class="fa fa-github" alt="Github"></i> &nbsp;&nbsp;&nbsp;
                     <i class="fa fa-facebook" alt="Facebook"></i> &nbsp;&nbsp;&nbsp;
@@ -70,7 +84,7 @@
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
-                    <li class="sidebar-search">
+                    <!--<li class="sidebar-search">
                         <div class="input-group custom-search-form">
                             <input type="text" class="form-control" placeholder="Search...">
                             <span class="input-group-btn">
@@ -80,7 +94,7 @@
                               </span>
                         </div>
 
-                    </li>
+                    </li>-->
                     <li>
                         <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
@@ -95,7 +109,7 @@
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Graphics</a>
                     </li>
                     <li>
-                        <a href="../../modules/hexagons/hexagons/index.html"><i class="fa fa-connectdevelop fa-fw"></i> Hexagons</a>
+                        <a href="#"><i class="fa fa-connectdevelop fa-fw"></i> Hexagons</a>
 
                     </li>
                     <li>
@@ -124,7 +138,7 @@
                     </li>
                 </ul>
 
-                <p class="align-text-bottom"> &copy; Copyright 2018. <a href="http://geoviz.ceoas.oregonstate.edu/">Cartography
+                <p class="align-text-bottom">&copy; Copyright 2018. <a href="http://geoviz.ceoas.oregonstate.edu/">Cartography
                     & Geovisualization Group</a> @ <a href="https://www.oregonstate.edu">Oregon State University</a>.
                     All rights reserved. </p>
 
@@ -134,32 +148,85 @@
         </div>
         <!-- /.navbar-static-side -->
     </nav>
-
     <div id="page-wrapper">
+
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Dashboard</h1>
-                <p></p>
-            </div>
-            <!-- /.col-lg-12 -->
+          <h2 class="col-12@sm">Dashboard</h2>
         </div>
 
-        <div class="panel-container row">
-            <div class="col-lg-12">
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Bar Chart
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <img src="../../modules/graphics/bar/assets/image.svg" width="100%">
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+      
+        <div class="filter-options filter-options--compound row">
+      
+          <div class="col-12@sm">
+            <div class="filter-group filter-group--compound js-colors">
+              <!--<p class="filter-label">Visualization Type</p>-->
+              <button class="btn btn--go" data-value="chart">Chart</button>
+              <button class="btn btn--go" data-value="diagram">Diagram</button>
+              <button class="btn btn--go" data-value="geo">Geospatial</button>
+              <button class="btn btn--go" data-value="plot">Plot</button>
+              <button class="btn btn--go" data-value="text">Text</button>
+              <button class="btn btn--go" data-value="elements">Elements</button>
+            </div>
+          </div>
+      
+          <!--<div class="col-6@sm">
+            <div class="filter-group filter-group--compound js-shapes">
+              <p class="filter-label">Data Type</p>
+              <span class="ib">
+                <input type="checkbox" value="text" id="text"> <label for="cb-circle">Text</label>
+              </span>
+              <span class="ib">
+                <input type="checkbox" value="number" id="number"> <label for="cb-diamond">Number</label>
+              </span>
+              <span class="ib">
+                <input type="checkbox" value="geo" id="geo"> <label for="cb-square">Geospatial</label>
+              </span>
+              <span class="ib">
+                <input type="checkbox" value="triangle" id="cb-triangle"> <label for="cb-triangle">Triangle</label>
+              </span>
+            </div>
+          </div>-->
+      
+        </div>
+      
+        <div class="row">
+          <div class="shape-shuffle-container js-shuffle">
+            
+            <div class="col-3@xs col-3@sm shape " data-shape="number" data-color="chart">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-bar-chart-o fa-fw"></i> Bar
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <img src="../../modules/graphics/bar/assets/image.svg" width="100%">
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
+            </div>
+            <div class="col-3@xs col-3@sm shape "  data-color="chart">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-pie-chart fa-fw"></i> Pie
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <img src="../../modules/graphics/pie/assets/image.svg" width="100%">
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
+                </div>
+            </div>            
+            <div class="col-3@xs col-3@sm shape "  data-color="diagram">
+              <div class="aspect">
+                <div class="aspect__inner">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-pie-chart fa-fw"></i> Venn
@@ -170,91 +237,125 @@
                         </div>
                         <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Candlestick
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <img src="../../modules/graphics/candlestick/assets/image.svg" width="100%">
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+              </div>
+            </div>            
+            <div class="col-3@xs col-3@sm shape "  data-color="plot">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-bar-chart-o fa-fw"></i> Candlestick
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <img src="../../modules/graphics/candlestick/assets/image.svg" width="100%">
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-connectdevelop fa-fw"></i> Hexagons
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <a href="../../modules/hexagons/hexagons/index.html"><img
-                                    src="../../modules/hexagons/hexagons/assets/image.svg" width="100%"></a>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="chart">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-bar-chart-o fa-fw"></i> Butterfly
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <img src="../../modules/graphics/butterfly/assets/image.svg" width="100%">
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Histogram
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <img src="../../modules/graphics/histogram/assets/image.svg" width="100%">
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="plot">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-connectdevelop fa-fw"></i> Hexagons
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <img src="../../modules/hexagons/hexagons/assets/image.svg" width="100%">
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-area-chart fa-fw"></i> Stacked Area
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <img src="../../modules/graphics/stackedarea/assets/image.svg" width="100%">
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="chart">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-area-chart fa-fw"></i> Stacked area
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <img src="../../modules/graphics/stackedarea/assets/image.svg" width="100%">
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-align-left fa-fw"></i> Dendrogram
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <img src="../../modules/graphics/dendrogram/assets/image.svg" width="100%">
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="text">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-align-left fa-fw"></i> Dendrogram
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <img src="../../modules/graphics/dendrogram/assets/image.svg" width="100%">
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-area-chart fa-fw"></i> Streamgraph
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <img src="../../modules/graphics/streamgraph/assets/image.svg" width="100%">
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="chart">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-bar-chart-o fa-fw"></i> Histogram
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <img src="../../modules/graphics/histogram/assets/image.svg" width="100%">
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-
-
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="chart">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-area-chart fa-fw"></i> Streamgraph
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <img src="../../modules/graphics/streamgraph/assets/image.svg" width="100%">
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
+                </div>
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="text">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-align-left fa-fw"></i> Tree
                         </div>
@@ -262,25 +363,31 @@
                         <div class="panel-body">
                             <img src="../../modules/graphics/tree/assets/image.svg" width="100%">
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-share-alt fa-fw"></i> Network
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <img src="../../modules/networks/network/assets/image.svg" width="100%">
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="diagram">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-share-alt fa-fw"></i> Network
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <img src="../../modules/networks/network/assets/image.svg" width="100%">
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
+              </div>
+              <div class="col-3@xs col-3@sm shape "  data-color="text">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-align-left fa-fw"></i> Word Cloud
                         </div>
@@ -288,13 +395,15 @@
                         <div class="panel-body">
                             <img src="../../modules/texts/wordcloud/assets/image.svg" width="100%">
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="diagram">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-align-left fa-fw"></i> Sankeys
                         </div>
@@ -302,51 +411,31 @@
                         <div class="panel-body">
                             <img src="../../modules/sankeys/sankey/assets/image.svg" width="100%">
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="geo">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-pie-chart fa-fw"></i> Pie
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <img src="../../modules/graphics/pie/assets/image.svg" width="100%">
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-map fa-fw"></i> Small Multiple
+                            <i class="fa fa-map fa-fw"></i> Small Multiples
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <img src="../../modules/graphics/smallmultiplemap/assets/image.svg" width="100%">
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart fa-fw"></i> Butterfly
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <img src="../../modules/graphics/butterfly/assets/image.svg" width="100%">
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="diagram">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-pie-chart fa-fw"></i> Arc
                         </div>
@@ -354,12 +443,15 @@
                         <div class="panel-body">
                             <img src="../../modules/graphics/arcdiagram/assets/image.svg" width="100%">
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="plot">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-pie-chart fa-fw"></i> Polar
                         </div>
@@ -367,12 +459,15 @@
                         <div class="panel-body">
                             <img src="../../modules/graphics/polarhover/assets/image.svg" width="100%">
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="elements">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-code fa-fw"></i> D3
                         </div>
@@ -380,12 +475,15 @@
                         <div class="panel-body">
                             <img src="../../modules/basics/d3/assets/image.svg" width="100%">
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
+              </div>  
+              <div class="col-3@xs col-3@sm shape "  data-color="elements">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-code fa-fw"></i> Color
                         </div>
@@ -393,12 +491,15 @@
                         <div class="panel-body">
                             <img src="../../modules/basics/color/assets/image.svg" width="100%">
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="panel panel-default">
+              </div>   
+              <div class="col-3@xs col-3@sm shape "  data-color="elements">
+                <div class="aspect">
+                  <div class="aspect__inner">
+                      <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-code fa-fw"></i> Layout
                         </div>
@@ -406,18 +507,20 @@
                         <div class="panel-body">
                             <img src="../../modules/basics/layout/assets/image.svg" width="100%">
                         </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                          <!-- /.panel-body -->
+                      </div>
+                  </div>
                 </div>
-            </div>
-         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /#page-wrapper -->
+              </div>  
+            
+            <div class="the-sizer col-1@xs col-1@sm"></div>
+          </div>
+        </div>
+      
 
-</div>
-<!-- /#wrapper -->
+            
+      </main>
+   
 
 <!-- jQuery -->
 <script src="../vendor/jquery/jquery.min.js"></script>
@@ -446,6 +549,24 @@
 
 </script>
 
+<script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+<!-- Syntax highlighting via Prism -->
+<script src="js/prism.js"></script>
+<!-- Shuffle! -->
+<script src="dist/shuffle.js"></script>
+
+<script src="js/site-nav.js"></script>
+
+
+
+
+
+<script src="js/demos/compound-filters.js"></script>
+
+
+
+
+<script>(function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='https://www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','UA-39355642-1','vestride.github.io');ga('send','pageview')</script>
 </body>
 
 </html>

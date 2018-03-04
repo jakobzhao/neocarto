@@ -7,6 +7,22 @@ body {
   background-color: #f8f8f8;
   padding-top: 50px;
 }
+.filter-group--compound button {
+  opacity: 0.8 !important; 
+  background-color:#f8f8f8 !important; 
+  width:12% !important;
+  margin: 0 auto !important;
+} 
+.btn:focus {
+  outline: 0px !important;
+}
+.btn {
+  padding: 6px 12px !important;
+}
+.shape-shuffle-container {
+  overflow: visible !important;
+  position: relative;
+}
 .panel-body {
   padding: 10px;
   background-color: #f8f8f8;
