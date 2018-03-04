@@ -1,9 +1,50 @@
-This pie chart is constructed from a CSV file storing the populations of various age groups. The chart employs a number of D3 features:
+#Pie Chart
 
-* [d3-dsv](https://github.com/d3/d3-dsv) - load and parse data
-* [d3-scale](https://github.com/d3/d3-scale) - color encoding
-* [d3-shape](https://github.com/d3/d3-shape) - layout and render arcs
+![image](assets\image.svg)
+
+A pie chart is divided into sectors, illustrating numerical proportion. In a pie chart, the arc length of each sector (and consequently its central angle and area), is proportional to the quantity it represents. While it is named for its resemblance to a pie which has been sliced, there are variations on the way it can be presented.
+
+[More info](http://datavizproject.com/data-type/pie-chart/)
 
 
-
-by[mbostock](http://bl.ocks.org/mbostock)
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head> 
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <link rel="stylesheet" href="css/billboard.css">
+        <script src="js/billboard.js"></script>    
+    </head>
+    <body>
+        <div id="PieChart"></div>
+       <script>
+    var chart = bb.generate({
+      data: {
+        columns: [
+    	["data1", 15],
+    	["data2", 56],
+        ["data3", 32],
+        ["data4", 44]
+        ],
+        type: "pie",
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onover: function (d, i) { console.log("onover", d, i); },
+        onout: function (d, i) { console.log("onout", d, i); }
+        },       
+        pie: {
+            title: "Pie Chart"
+        },
+        bindto: "#PieChart"
+        });
+    
+        chart.data.colors({
+        data4: "#FF753A",
+        data1: "#EAA000",
+        data2: "#FFC750",
+        data3: "#DC4405",
+        });
+    
+        </script>
+    </body>
+    
+    </html>
