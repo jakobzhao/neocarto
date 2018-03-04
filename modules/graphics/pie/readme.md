@@ -1,6 +1,6 @@
 #Pie Chart
 
-![image](assets\image.svg)
+![image](assets/image.svg)
 
 A pie chart is divided into sectors, illustrating numerical proportion. In a pie chart, the arc length of each sector (and consequently its central angle and area), is proportional to the quantity it represents. While it is named for its resemblance to a pie which has been sliced, there are variations on the way it can be presented.
 

@@ -1,6 +1,6 @@
 #Bar Chart
 
-![image](assets\image.svg)
+![image](assets/image.svg)
 
 A bar chart is a chart with rectangular bars with lengths proportional to the values that they represent.  One axis of the chart shows the specific categories being compared, and the other axis represents a discrete value.
 
