@@ -1,4 +1,4 @@
-#Bar Chart
+# Bar Chart
 
 ![image](assets/image.svg)
 
