@@ -52,7 +52,6 @@
 <body>
 
 <div id="wrapper">
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
@@ -71,9 +70,24 @@
                 <a href="https://github.com/jakobzhao/neocarto"
                    target="_blank">
                     <i class="fa fa-github" alt="Github"></i> &nbsp;&nbsp;&nbsp;
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=geoviz.ceoas.oregonstate.edu/neocarto/"
+                   target="_blank">&nbsp;&nbsp;
                     <i class="fa fa-facebook" alt="Facebook"></i> &nbsp;&nbsp;&nbsp;
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="https://twitter.com/home?status=geoviz.ceoas.oregonstate.edu/neocarto/"
+                   target="_blank">&nbsp;
                     <i class="fa fa-twitter" alt="Twitter"></i> &nbsp;&nbsp;&nbsp;
-                    <i class="fa fa-university" alt="OSU"></i>
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="geoviz.ceoas.oregonstate.edu"
+                   target="_blank">
+                    <i class="fa fa-university" alt="OSU GeoViz Lab"></i>
                 </a>
             </li>
 
@@ -121,7 +135,7 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-align-left fa-fw"></i> Text </span></a>
+                        <a href="#"><i class="fa fa-align-left fa-fw"></i> Text </a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-clock-o fa-fw"></i> Time </a>
@@ -544,7 +558,6 @@
         $('.panel').show();
         var filter = $(this).val().toLowerCase(); // get the value of the input, which we filter on
         $('.panel-container').find(".panel-heading:not(:contains(" + filter + "))").parent().css('display', 'none');
-
     });
 
 </script>
@@ -562,9 +575,6 @@
 
 
 <script src="js/demos/compound-filters.js"></script>
-
-
-
 
 <script>(function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='https://www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','UA-39355642-1','vestride.github.io');ga('send','pageview')</script>
 </body>
