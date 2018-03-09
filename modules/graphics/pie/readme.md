@@ -49,4 +49,4 @@ A pie chart is divided into sectors, illustrating numerical proportion. In a pie
     
     </html>
 
-[Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/graphics/pie/bar/index.html)
+[Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/graphics/pie/index.html)
