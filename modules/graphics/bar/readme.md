@@ -48,4 +48,4 @@ Bar charts provide a visual presentation of categorical data. Categorical data i
     
     </html>
 
-[Live Demo](index.html)
+[Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/graphics/bar/index.html)
