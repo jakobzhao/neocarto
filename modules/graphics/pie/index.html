@@ -1,60 +1,41 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+<html lang="en">
 
-.arc text {
-  font: 10px sans-serif;
-  text-anchor: middle;
-}
+<head> 
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="css/billboard.css">
+    <script src="js/billboard.js"></script>    
+</head>
+<body>
+    <div id="PieChart"></div>
+   <script>
+var chart = bb.generate({
+  data: {
+    columns: [
+	["data1", 15],
+	["data2", 56],
+    ["data3", 32],
+    ["data4", 44]
+    ],
+    type: "pie",
+    onclick: function (d, i) { console.log("onclick", d, i); },
+    onover: function (d, i) { console.log("onover", d, i); },
+    onout: function (d, i) { console.log("onout", d, i); }
+    },       
+    pie: {
+        title: "Pie Chart"
+    },
+    bindto: "#PieChart"
+    });
 
-.arc path {
-  stroke: #fff;
-}
+    chart.data.colors({
+    data4: "#FF753A",
+    data1: "#EAA000",
+    data2: "#FFC750",
+    data3: "#DC4405",
+    });
 
-</style>
-<svg width="960" height="500"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script>
+    </script>
+</body>
 
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height"),
-    radius = Math.min(width, height) / 2,
-    g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-var color = d3.scaleOrdinal(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d2461a", "#eeba3f"]);
-
-var pie = d3.pie()
-    .sort(null)
-    .value(function(d) { return d.population; });
-
-var path = d3.arc()
-    .outerRadius(radius - 10)
-    .innerRadius(0);
-
-var label = d3.arc()
-    .outerRadius(radius - 40)
-    .innerRadius(radius - 40);
-
-d3.csv("data.csv", function(d) {
-  d.population = +d.population;
-  return d;
-}, function(error, data) {
-  if (error) throw error;
-
-  var arc = g.selectAll(".arc")
-    .data(pie(data))
-    .enter().append("g")
-      .attr("class", "arc");
-
-  arc.append("path")
-      .attr("d", path)
-      .attr("fill", function(d) { return color(d.data.age); });
-
-  arc.append("text")
-      .attr("transform", function(d) { return "translate(" + label.centroid(d) + ")"; })
-      .attr("dy", "0.35em")
-      .text(function(d) { return d.data.age; });
-});
-
-</script>
+</html>
