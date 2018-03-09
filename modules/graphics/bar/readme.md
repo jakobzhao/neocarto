@@ -47,3 +47,5 @@ Bar charts provide a visual presentation of categorical data. Categorical data i
     </body>
     
     </html>
+
+[Live Demo](index.html)
