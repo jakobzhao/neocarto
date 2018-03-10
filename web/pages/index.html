@@ -25,6 +25,10 @@
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <script>
+        window.location.host.indexOf("github.io") > -1 && "https:" != window.location.protocol && (window.location.protocol = "https:");
+
+    </script>
 
     <!-- Prefetch DNS for external assets -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -39,8 +43,8 @@
 
 
     <script>
-        window.location.host.indexOf("github.io") > -1 && "https:" != window.location.protocol && (window.location.protocol = "https:");
         window.site_url = "/Shuffle";
+
     </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -96,6 +100,7 @@
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
+
                     <li>
                         <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
@@ -141,8 +146,6 @@
 
                 <p class="align-text-bottom">&copy; Copyright 2018. <a href="http://geoviz.ceoas.oregonstate.edu/">Cartography
                     & Geovisualization Group</a> @ <a href="https://www.oregonstate.edu">Oregon State University</a>. All rights reserved. </p>
-
-
             </div>
             <!-- /.sidebar-collapse -->
         </div>
@@ -168,24 +171,6 @@
                     <button class="btn btn--go" data-value="elements">Elements</button>
                 </div>
             </div>
-
-            <!--<div class="col-6@sm">
-                <div class="filter-group filter-group--compound js-shapes">
-                  <p class="filter-label">Data Type</p>
-                  <span class="ib">
-                    <input type="checkbox" value="text" id="text"> <label for="cb-circle">Text</label>
-                  </span>
-                  <span class="ib">
-                    <input type="checkbox" value="number" id="number"> <label for="cb-diamond">Number</label>
-                  </span>
-                  <span class="ib">
-                    <input type="checkbox" value="geo" id="geo"> <label for="cb-square">Geospatial</label>
-                  </span>
-                  <span class="ib">
-                    <input type="checkbox" value="triangle" id="cb-triangle"> <label for="cb-triangle">Triangle</label>
-                  </span>
-                </div>
-              </div>-->
 
         </div>
 
@@ -534,6 +519,14 @@
         <!-- Custom Theme JavaScript -->
         <script src="../dist/js/sb-admin-2.js"></script>
 
+        <!--<script>-->
+            <!--$('.form-control').keyup(function() {-->
+                <!--$('.panel').show();-->
+                <!--var filter = $(this).val().toLowerCase(); // get the value of the input, which we filter on-->
+                <!--$('.panel-container').find(".panel-heading:not(:contains(" + filter + "))").parent().css('display', 'none');-->
+            <!--});-->
+
+        <!--</script>-->
         <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
         <!-- Syntax highlighting via Prism -->
         <script src="js/prism.js"></script>
