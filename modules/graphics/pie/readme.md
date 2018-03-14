@@ -9,7 +9,7 @@ A pie chart is divided into sectors, illustrating numerical proportion. In a pie
 
 [More info](http://datavizproject.com/data-type/pie-chart/)
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 
