@@ -1,56 +1,43 @@
 <head>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js"></script>
-    <script src="//unpkg.com/cartogram-chart@1"></script>
-    <script src="//unpkg.com/d3-scale-chromatic"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js"></script>
+    <script src="http://unpkg.com/cartogram-chart@1"></script>
+    <script src="http://unpkg.com/d3-scale-chromatic"></script>
     <style>body { margin: 0; }</style>
 </head>
 
 <body>
 <div id="world"></div>
-
 <script>
 
-    const colorScale = d3.scaleSequential(d3.interpolateYlOrBr);
+    var colorScale = d3.scaleSequential(d3.interpolateYlOrBr);
 
-    const cartogram = Cartogram()
-        .valFormatter(n => n.toPrecision(3))
-    (document.getElementById('world'));
+    var cartogram = Cartogram()(document.getElementById('world'));
 
-    d3.json('ne_110m_admin_0_countries.json', (error, world) => {
+    d3.json('ne_110m_admin_0_countries.json', function(error, world)  {
+
         if (error) throw error;
 
     // exclude antarctica
     world.objects.countries.geometries.splice(
         world.objects.countries.geometries.findIndex(d => d.properties.ISO_A2 === 'AQ'),
-        1
-    );
+        1);
 
-    let ccData;
+
+    var  ccData = Object.assign(...world.objects.countries.geometries
+        .map(({ properties: { ISO_A2 } }) => ({ [ISO_A2]: Math.random() }))
+    );
 
     cartogram
         .topoJson(world)
         .topoObjectName('countries')
         .value(({ properties: { ISO_A2 } }) => ccData[ISO_A2])
-    .color(({ properties: { ISO_A2 } }) => colorScale(ccData[ISO_A2]))
-    .label(({ properties: p }) => `${p.NAME} (${p.ISO_A2})`)
-    .onClick(d => console.info(d));
+        .color(({ properties: { ISO_A2 } }) => colorScale(ccData[ISO_A2]))
+        .label(({ properties: p }) => `${p.NAME} (${p.ISO_A2})`)
+        .onClick(d => console.info(d));
 
+    cartogram.iterations(8);
 
-    genVals();
-    render();
-
-    //
-
-    function genVals() {
-        ccData = Object.assign(...world.objects.countries.geometries
-            .map(({ properties: { ISO_A2 } }) => ({ [ISO_A2]: Math.random() }))
-    );
-    }
-
-    function render() {
-        // cartogram.iterations(controls.Iterations);
-        cartogram.iterations(8);
-    }
     });
+
 </script>
 </body>
