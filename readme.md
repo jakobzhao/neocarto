@@ -1,5 +1,7 @@
 # [Start Bootstrap - Grayscale](https://startbootstrap.com/template-overviews/grayscale/)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jakobzhao/neocarto.svg)](https://greenkeeper.io/)
+
 [Grayscale](http://startbootstrap.com/template-overviews/grayscale/) is a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
 ## Preview
