@@ -22,7 +22,7 @@
 .btn-group:after{clear:both}
 .btn-group .btn{border-radius:0;float:left}
 .btn-group .btn:first-child{border-radius:3px 0 0 3px}
-.btn-group .btn:not(:first-child){margin-left:-1px}
+.btn-group .btn:not(:first-child){margin-left:1}
 .btn-group .btn:last-child{border-radius:0 3px 3px 0}
 .btn-group label.btn input[type=radio]{clip:rect(0,0,0,0);pointer-events:none;position:absolute}
 .btn{-webkit-appearance:none;background-color:rgba(86, 94, 52, 0);border:1px solid #34495e;border-radius:3px;color:#bfc4c9;cursor:pointer;display:inline-block;font-size:1.5rem;padding:.75em .8em;text-align:center;transition:.2s ease-out}@media (-moz-touch-enabled:0),(pointer:fine){.btn:hover{background-color:rgba(255,255, 255, 0.3);color:rgb(255, 255, 255);text-decoration:none}}
