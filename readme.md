@@ -1,138 +1,71 @@
-# NeoCarto (under development)
+# [Start Bootstrap - Grayscale](https://startbootstrap.com/template-overviews/grayscale/)
 
-<img src="https://github.com/jakobzhao/neocarto/raw/master/assets/logo.png" width="25%" height="25%" align="right" />
+[Grayscale](http://startbootstrap.com/template-overviews/grayscale/) is a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
-<p>Buy us a cup of coffee :coffee: :grinning: <a href="https://paypal.me/jakobzhao"><img src="https://github.com/jakobzhao/storymap/raw/master/img/Donate-PayPal-green.svg?sanitize=true" align="center" /></a> </p>
+## Preview
 
-### Convention
+[![Grayscale Preview](https://startbootstrap.com/assets/img/templates/grayscale.jpg)](https://blackrockdigital.github.io/startbootstrap-grayscale/)
 
-Naming
+**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-grayscale/)**
 
-structures
+## Status
 
-Images
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-grayscale/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-grayscale.svg)](https://www.npmjs.com/package/startbootstrap-grayscale)
+[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-grayscale.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-grayscale)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale?type=dev)
 
-cdn,
+## Download and Installation
 
-the outline of the readme.md in each module.
+To begin using this template, choose one of the following options to get started:
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/grayscale/)
+* Install via npm: `npm i startbootstrap-grayscale`
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-grayscale.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-grayscale)
 
-### website
+## Usage
 
-- the same web site template
-- tag: data type, graphic type
--
+### Basic Usage
 
+After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-### Content
+### Advanced Usage
 
-basic operations
-layout : single page, storytelling
+After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
 
-### Data
+#### Gulp Tasks
 
- - election data
-       raw data.
- - images --screenshots
+- `gulp` the default task that builds everything
+- `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made
+- `gulp sass` compiles SCSS files into CSS
+- `gulp minify-css` minifies the compiled CSS file
+- `gulp minify-js` minifies the themes JS file
+- `gulp copy` copies dependencies from node_modules to the vendor directory
 
- - Vector Data
-    US
-    Oregon
-    World
+## Bugs and Issues
 
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-grayscale/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/grayscale/).
 
-### Team Members
+## Custom Builds
 
-- [Bo Zhao](https://github.com/jakobzhao)
+You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
 
-- [Svevo Giovanni](https://github.com/cedrox74)
+## About
 
-### Setups
- - Github
- - CDN
- - Debugging
- 
-### Basics
- - jQuery
- - [D3.js](modules/basics/d3)
- - geojson
- - 
-### Infographics
- - treemap
- - circulate
- - streamgraph
- 
-### Geovisual Analytics
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-### Map Fundamentals
+* https://startbootstrap.com
+* https://twitter.com/SBootstrap
 
- - Data
- - Color
- - Neat Line
- - Typography
- - Labelling
- - Legend
- - Icon
- - Graticules
- - Projection
- - Tiles
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
-#### Euclidean Space
+* http://davidmiller.io
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
 
- - Hexagon
- - Heat Map
- - Spatial Sankey (flow map)
- - Voronoi
- - 
- 
-#### Non-Euclidean Space
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
- - Force Graph
- - Cartogram
+## Copyright and License
 
- 
- ### Narratives
-- Small Multiples
-- Storymap.js
-- Dashboard from Bootstrap
-
-### Libraries
-
-- D3.js
-- Leaflet
-- Simple Statistics
-- Bootstraps
-- Chroma.js
-- Font Awesome
-- Awesome CSS
-
-
-
-### Basemaps
-
-- MapBox
-- GeoViz Collection
-- CartoDB
-- OpenStreetMaps
-
-### Memo
-
-http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html
-
-time circle
-
-Hierarchy
-
-Cartogram
-
-voronoi
-
-wind map
-
-https://github.com/emeeks
-
-### How to Contribute?
-
-[NeoCarto Template](modules/basics/template)
-
-### Credits
-<img src="https://github.com/jakobzhao/geog371/raw/master/resources/img/logo.png" width="25%" height="25%" align="right" /> This Project is maintained by the [Cartography and Geovisualization Group at Oregon State University](http://geoviz.ceoas.oregonstate.edu). This project is under development, and currently under the LGPL-3.0 license. Free feel to copy, use and distrubte thi repository. However, if you would like to use the material of this project, please make sure to cite it.
+Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
