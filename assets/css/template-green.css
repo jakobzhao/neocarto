@@ -1,0 +1,133 @@
+/*! -----------------------------------------------------------------
+[Colors]
+*/
+
+::-moz-selection {
+    background: #27ae60;
+    color: #fff !important;
+}
+
+::-webkit-selection {
+    background: #27ae60;
+    color: #fff !important;
+}
+
+::selection {
+    background: #27ae60;
+    color: #fff !important;
+}
+
+a,
+.icon-box-icon,
+.post-meta a:hover,
+.post-meta a:focus,
+.search-button:hover,
+.widget ul li a:hover,
+.widget ol li a:hover,
+.filters > li > a:hover,
+.filters > li > a.current,
+.comment-meta-date a:hover,
+.comment-meta-date a:focus,
+.comment-meta-author a:hover,
+.comment-meta-author a:focus,
+.widget_recent_entries a:hover {
+    color: #27ae60;
+}
+
+a:hover,
+a:focus {
+    color: #1e8449;
+}
+
+blockquote {
+    border-left: 2px solid #27ae60;
+}
+
+.form-control:focus,
+.panel .panel-heading:hover,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+    border-color: #27ae60;
+}
+
+.label-brand,
+.progress-bar,
+.post-tags a:hover,
+.post-tags a:focus,
+.tagcloud > a:hover,
+.comment-reply > a:hover,
+.comment-reply > a:focus,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+    background-color: #27ae60;
+}
+
+.loader:after {
+    border-color: #27ae60 transparent transparent transparent;
+}
+
+.btn.btn-brand {
+    background-color: #27ae60;
+    border-color: #27ae60;
+    color: #fff;
+}
+
+.btn.btn-brand:hover,
+.btn.btn-brand:focus {
+    background-color: #295;
+    border-color: #295;
+    color: #fff;
+}
+
+.btn.btn-brand.btn-outline {
+    background: transparent;
+    border-color: #27ae60;
+    color: #27ae60;
+}
+
+.btn.btn-brand.btn-outline:hover,
+.btn.btn-brand.btn-outline:focus {
+    background: #27ae60;
+    color: #fff;
+}
+
+.btn.btn-brand.btn-link {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: #27ae60;
+}
+
+.btn.btn-brand.btn-link:hover,
+.btn.btn-brand.btn-link:focus {
+    background-color: transparent;
+    text-decoration: none;
+    color: #295;
+}
+
+.btn.btn-brand.btn-fade {
+    background: transparent;
+    border-color: rgba(39, 174, 96, .5);
+    color: rgba(39, 174, 96, .5);
+}
+
+.btn.btn-brand.btn-fade:hover,
+.btn.btn-brand.btn-fade:focus {
+    background: transparent;
+    border-color: #27ae60;
+    color: #27ae60;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    border-top: 3px solid #27ae60;
+}
