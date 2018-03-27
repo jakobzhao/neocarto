@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/billboard.js/1.3.0/billboard.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/billboard.js/1.3.0/billboard.js"></script>
+</head>
+
+<body>
+<div id="BarChart"></div>
+<script>
+    var chart = bb.generate({
+        data: {
+            columns: [
+                ["oregon", 30, 200, 100, 400, 150, 250],
+                ["california", 130, 100, 140, 200, 150, 50]
+            ],
+            type: "bar"
+        },
+        bar: {
+            width: {
+                ratio: 0.5
+            }
+        },
+        bindto: "#BarChart"
+    });
+
+    setTimeout(function() {
+        chart.load({
+            columns: [
+                ['Washington', 130, -150, 200, 300, -200, 100]
+            ]
+        });
+    }, 1000);
+
+</script>
+</body>
+
+</html>
