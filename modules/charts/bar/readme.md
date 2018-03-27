@@ -6,7 +6,7 @@ A bar chart is a chart with rectangular bars with lengths proportional to the va
 
 Bar charts provide a visual presentation of categorical data. Categorical data is a grouping of data into discrete groups, such as months of the year, age group, shoe sizes, and animals. These categories are usually qualitative. Bars on the chart may be arranged in any order.
 
-[More info](http://datavizproject.com/data-type/bar-chart/)
+[Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/graphics/bar/index.html)
 
 
     <!DOCTYPE html>
@@ -48,4 +48,5 @@ Bar charts provide a visual presentation of categorical data. Categorical data i
     
     </html>
 
-[Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/graphics/bar/index.html)
+
+[More info](http://datavizproject.com/data-type/bar-chart/)
