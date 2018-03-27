@@ -2,7 +2,7 @@
 
 ![image](assets/image.png)
 
-[Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/graphics/bar/index.html)
+[Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/charts/bar/index.html)
 
 A bar chart is a chart with rectangular bars with lengths proportional to the values that they represent.  One axis of the chart shows the specific categories being compared, and the other axis represents a discrete value.
 
