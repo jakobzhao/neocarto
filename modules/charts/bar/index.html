@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="css/billboard.css">
+    <script src="js/billboard.js"></script>    
+</head>
+<body>
+    <div id="BarChart"></div>
+   <script>
+var chart = bb.generate({
+  data: {
+    columns: [
+	["data1", 15,55, 135, 156, 145, 84, 61, 10]
+    ],
+    type: "bar",
+    onclick: function (d, i) { console.log("onclick", d, i); },
+    onover: function (d, i) { console.log("onover", d, i); },
+    onout: function (d, i) { console.log("onout", d, i); }
+    },       
+    bar: {width: {
+      ratio: 0.6,
+     
+    },
+        title: "Bar Chart"
+    },
+    bindto: "#BarChart"
+    });
+
+    chart.data.colors({
+    data1: "#EAA000"
+    });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+A candlestick chart is a style of bar-chart used to describe price movements of a security, derivative, or currency for a designated span of time. Each bar represents the range of price movement over a given time interval.
