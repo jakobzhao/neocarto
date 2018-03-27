@@ -1,1 +1,0 @@
-An example of a simple arc diagram layout

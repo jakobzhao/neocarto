@@ -1,1 +1,0 @@
-Streamgraphs are a generalization of stacked area graphs where the baseline is free. By shifting the baseline, it is possible to minimize the change in slope (or “wiggle”) in individual series, thereby making it easier to perceive the thickness of any given layer across the data. 
