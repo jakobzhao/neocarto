@@ -1,0 +1,26 @@
+body{
+	font-family: sans-serif;
+}
+
+.map{
+	display: inline-block;
+    text-align: center; }
+    
+path{
+	stroke-width:1; }
+	.yet-to-vote{
+	fill:none;
+	stroke:#666;
+    stroke-width:0.1; }
+    
+.voted{
+    fill:#DC4405; 
+    stroke:rgb(109, 33, 0);}
+    
+.voting{
+	fill:#F4BA38; 
+    stroke:rgb(116, 80, 2);}
+    
+.none{
+    fill:none;
+	stroke:none; }
