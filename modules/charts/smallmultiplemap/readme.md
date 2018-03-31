@@ -17,9 +17,9 @@ The 'body' tag contains the visible part of the page. The 'div' tag defines a di
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Small multiple maps</title>
+    <title>Small multiple maps</title>
     <link rel="stylesheet" href="style.css">
-	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
     <div id="maps"></div>
