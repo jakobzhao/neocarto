@@ -28,7 +28,11 @@ The 'body' tag contains the visible part of the page. The 'div' tag defines a di
 </html>
 ```
 
-The core part of the document is the JavaScript code. The first few lines define variables (var) such as current date, height and width of each small map, the projection used and the date format. Then data (map.geojson) is loaded using d3.json and a function extracts the dates from the geojson file (d.properties.date) so that the States can be grouped by date (dateJoin). Then a map is drawn for each date as an SVG (Scalable Vector Graphics) file into the 'maps' div in the html document. Each SVG is drawn according to the boundaries defined in the .geojson file, colored according to what defined in the .css file and sized according to the dimension variables defined earlier in the script (mapWidth and mapHeight). Finally the function 'update' allows to draw the final visualization using the current date (defined in the first variable) to show which State has already voted and which has not for each date.
+The core part of the document is the JavaScript code. The first few lines define variables (var) such as current date, height and width of each small map, the projection used and the date format. Then data (map.geojson) is loaded using d3.json and a function extracts the dates from the geojson file (d.properties.date) so that the States can be grouped by date (dateJoin). 
+
+Then a map is drawn for each date as an SVG (Scalable Vector Graphics) file into the 'maps' div in the html document. Each SVG is drawn according to the boundaries defined in the .geojson file, colored according to what defined in the .css file and sized according to the dimension variables defined earlier in the script (mapWidth and mapHeight). 
+
+Finally the function 'update' allows to draw the final visualization using the current date (defined in the first variable) to show which State has already voted and which has not for each date.
 
 ```javascript
 var currentDate = '2014-2-10';
