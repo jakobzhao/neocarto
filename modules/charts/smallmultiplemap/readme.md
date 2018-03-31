@@ -2,7 +2,7 @@
 
 ![image](assets/image.svg)
 
-[Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/charts/smallmultiples/index.html)
+[Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/charts/smallmultiplemap/index.html)
 
 Small multiple maps allows to create multiple representations of the same visualization to make data visually comparable. In this example we are using multiple maps of the US showing which State has voted at a certain date (red=already voted, yellow=voting no color= did not vote yet). 
 
