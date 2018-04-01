@@ -43,7 +43,7 @@ html {
 }
 
 .portfolio-item {
-
+	padding: 20px 20px !important;
 	font-family: 'Titillium Web', serif !important;
 }
 /*.filters {*/
