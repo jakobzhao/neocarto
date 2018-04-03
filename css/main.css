@@ -34,14 +34,12 @@ body {
 .tab-btn a{
 	color: #747474 !important;
 	/*font-weight: bold;*/
-	text-shadow:  0 0 1px #ffffff;
+	/*text-shadow:  0 0 1px #ffffff;*/
 }
 
 
 .about {
-
 	padding: 40px 0 !important;
-
 	font-family: 'Titillium Web', serif;
 }
 
