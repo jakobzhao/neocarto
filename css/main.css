@@ -20,6 +20,13 @@ body {
 	z-index: -1 ;
 }
 
+#scrolling-down-arrow {
+	position: fixed;
+	left:48%;
+	bottom:10% !important;
+}
+
+
 .tab-btn{
 	margin-left:20px;
 	font-family: 'Titillium Web', serif;
