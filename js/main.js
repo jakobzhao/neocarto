@@ -4,7 +4,7 @@ var mControls;
 
 var mScene;
 
-var mParticleCount = 5000; // <-- change this number!
+var mParticleCount = 10000; // <-- change this number!
 var mParticleSystem;
 
 var mTime = 0.0;
