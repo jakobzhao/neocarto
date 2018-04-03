@@ -8,8 +8,8 @@ var mParticleCount = 5000; // <-- change this number!
 var mParticleSystem;
 
 var mTime = 0.0;
-var mTimeStep = (1/60);
-var mDuration = 200;
+var mTimeStep = (1/30);
+var mDuration = 150;
 
 window.onload = function () {
     init();
