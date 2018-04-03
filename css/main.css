@@ -11,7 +11,7 @@ body {
 }
 
 #three-container {
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -26,7 +26,6 @@ body {
 	bottom:10% !important;
 }
 
-
 .tab-btn{
 	margin-left:20px;
 	font-family: 'Titillium Web', serif;
@@ -37,6 +36,8 @@ body {
 	/*font-weight: bold;*/
 	text-shadow:  0 0 1px #ffffff;
 }
+
+
 .about {
 
 	padding: 40px 0 !important;
@@ -102,9 +103,7 @@ footer {
 
 
 }
-body {
-    overflow-x: hidden;
-}
+
 #wrapper {
 	padding-left: 0;
 	-webkit-transition: all 0.5s ease;
