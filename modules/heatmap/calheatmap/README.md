@@ -2,7 +2,7 @@
 
 **Calendar Heatmap** | **Last updated: May 2018** | **Applicable data types: CSV or JSON** | **Author: [Hannah Friedrich]**
 
-![](img/cal-01.png)
+![](img/cal.png)
 
 [Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/heatmap/calheatmap/index.html)
 
