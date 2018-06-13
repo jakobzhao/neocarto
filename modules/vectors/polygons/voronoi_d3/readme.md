@@ -3,6 +3,7 @@
 **Geoviz Type**: Tessellation | **Last Updated:** 09/22/2017 | **Applicable Type**: Voronoi Polygon Simulation | **Contributors:** [Mike Bostock](https://github.com/charwak/Bostock/)
 
 ![](img/image.jpg)
+
 [Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/vectors/polygons/voronoi_d3/index.html)
 
 
