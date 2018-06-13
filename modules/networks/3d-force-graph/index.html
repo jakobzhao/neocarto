@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Force Graph</title>
+    <style> body { margin: 0; } </style>
+    <script src="https://unpkg.com/3d-force-graph@1.31.4/dist/3d-force-graph.js"></script>
+</head>
+<body>
+<div id="3d-graph"></div>
+<script>
+    const Graph = ForceGraph3D()
+    (document.getElementById('3d-graph'))
+        .jsonUrl('assets/friends.json')
+        .nodeLabel('id')
+        .nodeAutoColorBy('group')
+        .linkDirectionalParticles("value")
+        .linkDirectionalParticleSpeed(d => d.value * 0.001);
+</script>
+</body>
+</html>
