@@ -8,6 +8,9 @@
 
 ![basic ts](img/sif_ts_full.png)
 
+[Live Demo](http://geoviz.ceoas.oregonstate.edu/neocarto/modules/time/timeseries/index.html)
+
+
 ##Overview
 
 This is an interactive **time series** graph, suitable for visualizing **continuous** data. Unlike a [streamgraph](https://bl.ocks.org/mbostock/4060954), this interfave is more suitable for visualizing **cyclical data**. The interactive tooltip, which displays the value for each series, helps **compare values among groups**. 
