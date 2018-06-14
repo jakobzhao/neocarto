@@ -1,0 +1,29 @@
+
+
+.line {
+    fill: none;
+    opacity: 0.7;
+    stroke-width: 4px;
+}
+
+.axis{
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.text{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.legend {
+    padding: 5px;
+    font: 15px sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background: yellow;
+    box-shadow: 2px 2px 1px #888;
+}
+
+.mouse-per-line {
+    font: 15px sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
