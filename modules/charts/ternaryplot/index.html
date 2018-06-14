@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ternary Plot</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+
+<body>
+
+<svg width="400" height="400"></svg>
+
+<script>
+
+    var svg = d3.select("svg"),
+        margin = {top: 30, right: 20, bottom: 30, left: 20},
+        m = 15,
+        width = +svg.attr("width") - margin.left - margin.right,
+        height = +svg.attr("height") - margin.top - margin.bottom,
+        axis_labels = ['A','B','C'];
+
+    var g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+    var corners = [[m,height-2*m],[width-m, height-2*m],[width/2,(height-2*m-(width/2-m)* Math.sqrt(3))]];
+    corners.forEach(function(corner, idx) {
+        var c1 = idx, c2 = idx + 1; if(c2 >= corners.length) { c2 = 0;}
+        g.append("line")
+            .attr("x1", corners[c1][0])
+            .attr("y1", corners[c1][1])
+            .attr("x2", corners[c2][0])
+            .attr("y2", corners[c2][1])
+            .classed('axis', true);
+    });
+
+
+    var ticks = [0,20,40,60,80,100];
+    ticks.forEach(function(v) {
+
+        var coord1 = coord(v, 0, 100-v);
+        var coord2 = coord(v, 100-v, 0);
+        var coord3 = coord(0, 100-v, v);
+        var coord4 = coord(100-v, 0, v);
+        if(v !== 0 && v !== 100) {
+            g.append("line")
+                .attr("x1", coord1[0])
+                .attr("y1", coord1[1])
+                .attr("x2", coord2[0])
+                .attr("y2", coord2[1])
+                .classed('tick tick-a', true);
+            g.append("line")
+                .attr("x1", coord2[0])
+                .attr("y1", coord2[1])
+                .attr("x2", coord3[0])
+                .attr("y2", coord3[1])
+                .classed('tick tick-b', true);
+            g.append("line")
+                .attr("x1", coord3[0])
+                .attr("y1", coord3[1])
+                .attr("x2", coord4[0])
+                .attr("y2", coord4[1])
+                .classed('tick tick-c', true);
+        }
+        g.append("text")
+            .attr("x", coord1[0] - 20)
+            .attr("y", coord1[1]  )
+            .text( function (d) { return v; })
+            .classed('tick-text tick-a', true);
+        g.append("text")
+            .attr("x", coord2[0] - 6)
+            .attr("y", coord2[1] + 15 )
+            .text( function (d) { return (100- v); })
+            .classed('tick-text tick-b', true);
+        g.append("text")
+            .attr("x", coord3[0] + 6)
+            .attr("y", coord3[1] )
+            .text( function (d) { return v; })
+            .classed('tick-text tick-c', true);
+    })
+
+
+    var axis_location = [
+        [width/2, height], // a
+        [width/6, height/2], //b
+        [4*width/5, height/2] ] //c
+
+
+    //axis names
+    g.selectAll('.axis-title')
+        .data(axis_labels)
+        .enter()
+        .append('g')
+        .attr('class', 'axis-title')
+        .attr('transform',function(d,i){
+            return 'translate('+axis_location[i][0]+','+axis_location[i][1]+')';
+        })
+        .append('text')
+        .text(function(d){ return d; })
+        .attr('text-anchor', function(d,i){
+            if(i===0) return 'end';
+            if(i===2) return 'middle';
+            return 'start';
+
+        })
+
+
+
+
+
+
+    d3.csv("assets/data.csv").then(function(data) {
+        g.selectAll("circle")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) {
+                return coord(+d.a,+d.b,+d.c)[0]
+            })
+            .attr("cy", function (d) { return coord(+d.a,+d.b,+d.c)[1] })
+            .attr("r", 5)
+
+
+        // }
+    });
+
+    function coord(a, b, c){
+        var sum, pos = [0,0];
+        sum = a + b + c;
+        if(sum !== 0) {
+            a /= sum;
+            b /= sum;
+            c /= sum;
+            pos[0] =  corners[0][0]  * a + corners[1][0]  * b + corners[2][0]  * c;
+            pos[1] =  corners[0][1]  * a + corners[1][1]  * b + corners[2][1]  * c;
+        }
+        return pos;
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
