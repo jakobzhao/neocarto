@@ -1,0 +1,17 @@
+button {
+    background-color: #5581ba; /*dark blue from Neocarto theme*/
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    position: relative;
+    left: -390px;
+    bottom: 10px;
+}
+
+
