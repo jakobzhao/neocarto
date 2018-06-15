@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<title>Estimated Treated Water Flow in Washington County</title>
+<svg width="750" height="400"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://unpkg.com/d3-sankey@0.6"></script>
+<script>
+
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+
+var formatNumber = d3.format(",.0f"),
+    format = function(d) { return formatNumber(d) + " "+"MGD"; },
+    // color = d3.scaleOrdinal(d3.schemeCategory10);
+    // altered color scheme based on https://stackoverflow.com/questions/13006712/d3-js-sankey-diagram-rectangles-fill-color
+    color = d3.scaleOrdinal()
+        .domain(["Columbia South Shore Well Field",
+            "Bull Run Watershed",
+            "Haggs Lake",
+            "Barney Reservoir",
+            "Powell Butte Reservoir",
+            "Tualatin River",
+            "Washington County Pipeline",
+            "JWC Treatment Plant",
+            "Water Consumers",
+            "Other",
+            "CWS Durham Treatment Plant",
+            "CWS Rock Creek Treatment Plant"])
+        .range(["#dc4404",
+            "#f3bb3b",
+            "#dc4404",
+            "#f3bb3b",
+            "#84aec8",
+            "#84aec8",
+            "#5581ba",
+            "#5581ba",
+            "#f3bb3b",
+            "#dc4404",
+            "#84aec8",
+            "#5581ba"]);
+
+// Sets width and padding of nodes
+var sankey = d3.sankey()
+    .nodeWidth(15)
+    .nodePadding(10)
+    .extent([[1, 1], [width - 1, height - 6]]);
+
+// Sets color and opacity of links
+var link = svg.append("g")
+    .attr("class", "links")
+    .attr("fill", "none")
+    .attr("stroke", "#dcdbdb")
+    .attr("stroke-opacity", 1)
+  .selectAll("path");
+
+// Sets attributes of the labels
+var node = svg.append("g")
+    .attr("class", "nodes")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 10)
+  .selectAll("g");
+
+//links the dataset and sets up error message
+d3.json("energy1.json", function(error, energy1) {
+  if (error) throw error;
+
+  sankey(energy1);
+
+  link = link
+    .data(energy1.links)
+    .enter().append("path")
+      .attr("d", d3.sankeyLinkHorizontal())
+      .attr("stroke-width", function(d) { return Math.max(1, d.width); });
+
+  link.append("title")
+      .text(function(d) { return d.source.name + " → " + d.target.name + "\n" + format(d.value); });
+
+  node = node
+    .data(energy1.nodes)
+    .enter().append("g");
+
+  // adds the colored node boxes to the Sankey diagram, each size based on the link values
+  node.append("rect")
+      .attr("x", function(d) { return d.x0; })
+      .attr("y", function(d) { return d.y0; })
+      .attr("height", function(d) { return d.y1 - d.y0; })
+      .attr("width", function(d) { return d.x1 - d.x0; })
+      .attr("fill", function(d) { return color(d.name.replace(/ .*/, "")); })
+      .attr("stroke", "#000");
+
+  // Makes the names of each node show up on the Sankey diagram
+  node.append("text")
+      .attr("x", function(d) { return d.x0 - 6; })
+      .attr("y", function(d) { return (d.y1 + d.y0) / 2; })
+      .attr("dy", "0.35em")
+      .attr("text-anchor", "end")
+      .text(function(d) { return d.name; })
+    .filter(function(d) { return d.x0 < width / 2; })
+      .attr("x", function(d) { return d.x1 + 6; })
+      .attr("text-anchor", "start");
+
+  node.append("title")
+      .text(function(d) { return d.name + "\n" + format(d.value); });
+});
+
+</script>

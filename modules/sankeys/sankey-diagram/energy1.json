@@ -1,0 +1,33 @@
+{"nodes":[
+{"name":"Columbia South Shore Well Field"},
+{"name":"Bull Run Watershed"},
+{"name":"Haggs Lake"},
+{"name":"Barney Reservoir"},
+{"name":"Powell Butte Reservoir"},
+{"name":"Tualatin River"},
+{"name":"Washington County Pipeline"},
+{"name":"JWC Treatment Plant"},
+{"name":"Water Consumers"},
+{"name":"Other"},
+{"name":"CWS Durham Treatment Plant"},
+{"name":"CWS Rock Creek Treatment Plant"}
+],
+
+"links":[
+{"source":0,"target":4,"value":21.1},
+
+{"source":1,"target":4,"value":21.2},
+
+{"source":2,"target":5,"value":38},
+
+{"source":3,"target":5,"value":37},
+
+{"source":4,"target":6,"value":42.3},
+
+{"source":5,"target":7,"value":75},
+
+{"source":6,"target":8,"value":42.3},
+
+{"source":7,"target":8,"value":75},
+
+{"source":8,"target":9,"value":52.3},{"source":8,"target":10,"value":26},{"source":8,"target":11,"value":39}]}

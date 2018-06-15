@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <![endif]-->
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3.hexbin.v0.js"></script>
+    <script src="js/leaflet-src.js"></script>
+
+    <script type="text/javascript" src="js/colorbrewer.js"></script>
+    <script type="text/javascript" src="js/leaflet.hexbin-layer.js"></script>
+
+    <style type="text/css">
+        html, body { margin: 0; padding: 0; height: 400px; width: 400px; font: 10px "Open Sans" }
+        #quake { min-height: 100%; }
+        .hexagon { opacity: 0.7 }
+    </style>
+</head>
+<body>
+
+<!--<div id='quake' data-source="quakes_christchurch_20100901-20101001_mag-gt3.json"></div>-->
+<div id='quake' data-source="assets/tongariro.geojson"></div>
+
+<script type="text/javascript">
+
+
+
+
+    (function () {
+        var max, scale,
+            classes = 9,
+            scheme = colorbrewer["YlOrRd"][classes],
+            container = L.DomUtil.get('quake'),
+            //map = L.map(container).setView([-43.6, 172.3], 10);
+            map = L.map(container).setView([-39.101545, 175.679850],6);
+
+        var Esri_DeLorme = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Data-source: GEONET',
+            minZoom: 1,
+            maxZoom: 11
+        }).addTo(map);
+
+
+        // Async call for data. Source URL is loaded from container element's
+        // 'data-source' attribute.
+        d3.json(container.dataset.source, function(collection) {
+            // When data arrives, create leaflet layer with custom style callback.
+            L.hexLayer(collection, {
+                applyStyle: hex_style
+            }).addTo(map);
+        });
+
+
+
+
+
+
+        /**
+         * Hexbin style callback.
+         *
+         * Determines a quantize scale (http://bl.ocks.org/4060606) based on the
+         * map's initial data density (which is based on the initial zoom level)
+         * and applies a colorbrewer (http://colorbrewer2.org/) colour scheme
+         * accordingly.
+         */
+        function hex_style(hexagons) {
+            // Maintain a density scale relative to initial zoom level.
+            if (!(max && scale)) {
+                max = d3.max(hexagons.data(), function (d) { return d.length; });
+                scale = d3.scale.quantize()
+                    .domain([0, max])
+                    .range(d3.range(classes));
+            }
+
+            hexagons
+                .attr("stroke", scheme[classes - 1])
+                .attr("fill", function (d) {
+                    return scheme[scale(d.length)];
+                });
+        }
+    }());
+</script>
+</body>
+</html>

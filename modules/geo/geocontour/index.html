@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mount Hood D3 Contours</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-hsv.v0.1.min.js"></script>
+    <script src="https://d3js.org/d3-contour.v1.min.js"></script>
+</head>
+
+<body>
+<svg width="400" height="400" stroke="#fff" stroke-width="0.5">
+    <rect x="65" y="30" width="305" height="305" stroke="#5581ba" fill="white"/>
+</svg>
+
+<script>
+    // CONSTANTS
+    var ZRANGE = [1100, 3500];
+    var dZ = 75;
+    var xi = [598.80121, 605.26936];   // Easting (km)
+    var yi = [5020.50918, 5030.00915]; // Northing (km)
+    var FNAME = "assets/mthood.json";
+</script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

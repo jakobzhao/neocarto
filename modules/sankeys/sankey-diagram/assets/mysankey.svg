@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+
+<svg
+        xmlns="https://vanstolc.github.io/d3_sankey_practice/assets/mysankey.svg"
+        xmlns:xlink="https://vanstolc.github.io/d3_sankey_practice/assets/mysankey.svg"
+        width="750" height="400"><g class="links" fill="none" stroke="#dcdbdb" stroke-opacity="1"><path d="M16,285.74552429667506C100.125,285.74552429667506,100.125,292.1291921244031,184.25,292.1291921244031" stroke-width="65.29667519181586"><title>Columbia South Shore Well Field â†’ Powell Butte Reservoir
+    21 MGD</title></path><path d="M16,361.19693094629133C100.125,361.19693094629133,100.125,357.58059877401945,184.25,357.58059877401945" stroke-width="65.60613810741688"><title>Bull Run Watershed â†’ Powell Butte Reservoir
+    21 MGD</title></path><path d="M16,59.79795396419415C100.125,59.79795396419415,100.125,68.8749169024292,184.25,68.8749169024292" stroke-width="117.59590792838875"><title>Haggs Lake â†’ Tualatin River
+    38 MGD</title></path><path d="M16,185.84654731457783C100.125,185.84654731457783,100.125,184.92351025281283,184.25,184.92351025281283" stroke-width="114.50127877237853"><title>Barney Reservoir â†’ Tualatin River
+    37 MGD</title></path><path d="M199.25,324.93226117811156C283.375,324.93226117811156,283.375,325.9268236371947,367.5,325.9268236371947" stroke-width="130.90281329923275"><title>Powell Butte Reservoir â†’ Washington County Pipeline
+    42 MGD</title></path><path d="M199.25,126.12555628861847C283.375,126.12555628861847,283.375,129.12960627166504,367.5,129.12960627166504" stroke-width="232.09718670076728"><title>Tualatin River â†’ JWC Treatment Plant
+    75 MGD</title></path><path d="M382.5,325.9268236371947C466.625,325.9268236371947,466.625,316.172693328822,550.75,316.172693328822" stroke-width="130.90281329923275"><title>Washington County Pipeline â†’ Water Consumers
+    42 MGD</title></path><path d="M382.5,129.12960627166504C466.625,129.12960627166504,466.625,134.67269332882194,550.75,134.67269332882194" stroke-width="232.09718670076728"><title>JWC Treatment Plant â†’ Water Consumers
+    75 MGD</title></path><path d="M565.75,99.54865240810582C649.875,99.54865240810582,649.875,91.92455242966739,734,91.92455242966739" stroke-width="161.84910485933503"><title>Water Consumers â†’ Other
+    52 MGD</title></path><path d="M565.75,341.3939209503053C649.875,341.3939209503053,649.875,353.7698209718669,734,353.7698209718669" stroke-width="80.46035805626599"><title>Water Consumers â†’ CWS Durham Treatment Plant
+    26 MGD</title></path><path d="M565.75,240.81847337997283C649.875,240.81847337997283,649.875,243.19437340153434,734,243.19437340153434" stroke-width="120.69053708439898"><title>Water Consumers â†’ CWS Rock Creek Treatment Plant
+    39 MGD</title></path></g><g class="nodes" font-family="sans-serif" font-size="10"><g><rect x="1" y="253.0971867007671" height="65.29667519181578" width="15" fill="#dc4404" stroke="#000"></rect><text x="22" y="285.745524296675" dy="0.35em" text-anchor="start">Columbia South Shore Well Field</text><title>Columbia South Shore Well Field
+    21 MGD</title></g><g><rect x="1" y="328.3938618925829" height="65.60613810741711" width="15" fill="#f3bb3b" stroke="#000"></rect><text x="22" y="361.19693094629145" dy="0.35em" text-anchor="start">Bull Run Watershed</text><title>Bull Run Watershed
+    21 MGD</title></g><g><rect x="1" y="0.9999999999997726" height="117.5959079283888" width="15" fill="#dc4404" stroke="#000"></rect><text x="22" y="59.79795396419417" dy="0.35em" text-anchor="start">Haggs Lake</text><title>Haggs Lake
+    38 MGD</title></g><g><rect x="1" y="128.59590792838856" height="114.50127877237856" width="15" fill="#f3bb3b" stroke="#000"></rect><text x="22" y="185.84654731457783" dy="0.35em" text-anchor="start">Barney Reservoir</text><title>Barney Reservoir
+    37 MGD</title></g><g><rect x="184.25" y="259.4808545284952" height="130.9028132992326" width="15" fill="#84aec8" stroke="#000"></rect><text x="205.25" y="324.9322611781115" dy="0.35em" text-anchor="start">Powell Butte Reservoir</text><title>Powell Butte Reservoir
+    42 MGD</title></g><g><rect x="184.25" y="10.076962938234823" height="232.0971867007674" width="15" fill="#84aec8" stroke="#000"></rect><text x="205.25" y="126.12555628861853" dy="0.35em" text-anchor="start">Tualatin River</text><title>Tualatin River
+    75 MGD</title></g><g><rect x="367.5" y="260.4754169875783" height="130.9028132992326" width="15" fill="#5581ba" stroke="#000"></rect><text x="388.5" y="325.9268236371946" dy="0.35em" text-anchor="start">Washington County Pipeline</text><title>Washington County Pipeline
+    42 MGD</title></g><g><rect x="367.5" y="13.08101292128139" height="232.09718670076742" width="15" fill="#5581ba" stroke="#000"></rect><text x="388.5" y="129.1296062716651" dy="0.35em" text-anchor="start">JWC Treatment Plant</text><title>JWC Treatment Plant
+    75 MGD</title></g><g><rect x="550.75" y="18.62409997843831" height="363.00000000000006" width="15" fill="#f3bb3b" stroke="#000"></rect><text x="544.75" y="200.12409997843835" dy="0.35em" text-anchor="end">Water Consumers</text><title>Water Consumers
+    117 MGD</title></g><g><rect x="734" y="10.999999999999872" height="161.84910485933494" width="15" fill="#dc4404" stroke="#000"></rect><text x="728" y="91.92455242966733" dy="0.35em" text-anchor="end">Other</text><title>Other
+    52 MGD</title></g><g><rect x="734" y="313.53964194373395" height="80.46035805626605" width="15" fill="#dc4404" stroke="#000"></rect><text x="728" y="353.769820971867" dy="0.35em" text-anchor="end">CWS Durham Treatment Plant</text><title>CWS Durham Treatment Plant
+    26 MGD</title></g><g><rect x="734" y="182.84910485933483" height="120.69053708439912" width="15" fill="#dc4404" stroke="#000"></rect><text x="728" y="243.1943734015344" dy="0.35em" text-anchor="end">CWS Rock Creek Treatment Plant</text><title>CWS Rock Creek Treatment Plant
+    39 MGD</title></g></g></svg>
